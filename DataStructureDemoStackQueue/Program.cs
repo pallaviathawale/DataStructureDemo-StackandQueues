@@ -4,7 +4,11 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Data Structure demo using Stack and Queue");
+           StackLinkedList stackLinkedList = new StackLinkedList();
+           stackLinkedList.Push(70);
+           stackLinkedList.Push(30);
+           stackLinkedList.Push(56);
+           stackLinkedList.Display();
         }
     }
 }
