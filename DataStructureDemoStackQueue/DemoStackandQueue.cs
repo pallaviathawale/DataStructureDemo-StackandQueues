@@ -35,7 +35,35 @@ namespace DataStructureDemoStackQueue
                 Console.WriteLine(temp.data + " ");
                 temp = temp.next;
             }
-            
+           
+        }
+
+        internal void Peek()
+        {
+            if (this.top == null)
+            {
+                Console.WriteLine("Stack is Empty");
+            }
+            Console.WriteLine("{0} is in the top of the stack", this.top.data);
+
+        }
+        internal void Pop()
+        {
+            if(this.top == null)
+            {
+                Console.WriteLine("Stack is empty, Deletion is not possible");
+                return;
+            }
+            Console.WriteLine("Value Popped is {0}", this.top.data);
+            this.top = this.top.next;
+        }
+        internal void IsEmpty()
+        {
+            while(this.top != null)
+            {
+                Peek();
+                Pop();
+            }
         }
     }
 }
